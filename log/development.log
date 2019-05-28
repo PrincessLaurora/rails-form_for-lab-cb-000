@@ -572,3 +572,24 @@ Processing by StudentsController#edit as HTML
 Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.1ms)
 
 
+Started PATCH "/students/5" for 93.41.127.250 at 2019-05-28 10:07:08 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJsc+t+SFBaTYU3uMGmLBtfxaBO9+GmuoJyRYDJSNDJQ6FXQFB4DzlsKIxfyiZkJuYgfHDs8NVM1oottCOQepg==", "student"=>{"first_name"=>"Vicky", "last_name"=>"Felces"}, "commit"=>"Update Student", "id"=>"5"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Unpermitted parameter: last_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "students" SET "first_name" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["first_name", "Vicky"], ["updated_at", "2019-05-28 10:07:08.534379"], ["id", 5]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.133.20:33541/students/5
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/students/5" for 93.41.127.250 at 2019-05-28 10:07:08 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.1ms)
+
+
