@@ -511,3 +511,12 @@ Redirected to http://165.227.133.20:33541/students/5
 Completed 302 Found in 8ms (ActiveRecord: 4.6ms)
 
 
+Started GET "/students/5" for 93.41.127.250 at 2019-05-28 09:57:34 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
