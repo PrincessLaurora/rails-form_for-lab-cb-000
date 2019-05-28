@@ -520,3 +520,5 @@ Processing by StudentsController#show as HTML
 Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/students/5" for 93.41.127.250 at 2019-05-28 10:06:36 +0000
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-2.6.1/gems/activerecord-5.0.7.2/lib/active_record/railtie.rb:113)
