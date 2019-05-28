@@ -386,3 +386,11 @@ Processing by SchoolClassesController#show as HTML
 Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/school_classes" for 93.41.127.250 at 2019-05-28 09:53:16 +0000
+Processing by SchoolClassesController#index as HTML
+  Rendering school_classes/index.html.erb within layouts/application
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
