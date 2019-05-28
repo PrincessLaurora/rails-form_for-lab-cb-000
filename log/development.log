@@ -324,3 +324,36 @@ Processing by SchoolClassesController#show as HTML
 Completed 200 OK in 19ms (Views: 12.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/school_classes" for 93.41.127.250 at 2019-05-28 09:52:30 +0000
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /usr/local/rvm/gems/ruby-2.6.1/gems/activerecord-5.0.7.2/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#index as HTML
+  Rendering school_classes/index.html.erb within layouts/application
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 236ms (Views: 221.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/school_classes/new" for 93.41.127.250 at 2019-05-28 09:52:40 +0000
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb within layouts/application
+  Rendered school_classes/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for 93.41.127.250 at 2019-05-28 09:52:45 +0000
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UOKGJ5iFezYGYdDWLdKixipI75uF70BOLBRW20BjfdiEkc8NUwls7s4Kvi/vMrDJRDGYlAMrHLO5KkzWetVXTA==", "school_class"=>{"title"=>"Pisca", "room_number"=>"59"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Pisca"], ["room_number", 59], ["created_at", "2019-05-28 09:52:45.258686"], ["updated_at", "2019-05-28 09:52:45.258686"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.133.20:33541/school_classes/2
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/school_classes/2" for 93.41.127.250 at 2019-05-28 09:52:45 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.4ms)
