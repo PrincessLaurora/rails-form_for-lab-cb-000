@@ -32,6 +32,6 @@ end
 
 private
 
-def post_params(*args)
+def school_class_params(*args)
   params.require(:school_class).permit(*args)
 end
